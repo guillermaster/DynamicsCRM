@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Monedas>
+	<Moneda CodBMSC="2" CodISO="USD" />
+	<Moneda CodBMSC="0" CodISO="BOB" />
+</Monedas>

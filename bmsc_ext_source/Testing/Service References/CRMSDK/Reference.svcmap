@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0f462334-9a60-4349-937c-3f95427e6154" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://crmserver:5555/XRMServices/2011/Organization.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrganizationService.wsdl" MetadataType="Wsdl" ID="b712ad66-3279-4f9c-b72d-f2b990488f2d" SourceId="1" SourceUrl="http://crmserver:5555/XRMServices/2011/Organization.svc?wsdl" />
+    <MetadataFile FileName="Organization.wsdl" MetadataType="Wsdl" ID="38b60b93-8f95-4ddb-942e-f408531527a3" SourceId="1" SourceUrl="http://crmserver:5555/XRMServices/2011/Organization.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Organization.disco" MetadataType="Disco" ID="d8df60f1-f2cf-49be-a3b0-9b5f3985a0be" SourceId="1" SourceUrl="http://crmserver:5555/XRMServices/2011/Organization.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

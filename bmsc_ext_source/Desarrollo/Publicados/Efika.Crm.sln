@@ -1,0 +1,191 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Plugins", "Efika.Crm.Plugins\Efika.Crm.Plugins.csproj", "{0D072900-5D8C-4B97-815D-9E29964A20C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.WebService", "Efika.Crm.WebService\Efika.Crm.WebService.csproj", "{7D62902A-B9E3-4AB7-893A-6F5BED55183F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comunes", "Comunes", "{2D966AA7-9B47-4CDF-BFE0-4C4CC98E1DE3}"
+	ProjectSection(SolutionItems) = preProject
+		Comunes\AjaxControlToolkit.dll = Comunes\AjaxControlToolkit.dll
+		Comunes\Ionic.Utils.Zip.dll = Comunes\Ionic.Utils.Zip.dll
+		Comunes\Microsoft.Crm.dll = Comunes\Microsoft.Crm.dll
+		Comunes\Microsoft.Crm.Platform.Sdk.dll = Comunes\Microsoft.Crm.Platform.Sdk.dll
+		Comunes\Microsoft.Crm.Sdk.dll = Comunes\Microsoft.Crm.Sdk.dll
+		Comunes\microsoft.crm.sdk.proxy.dll = Comunes\microsoft.crm.sdk.proxy.dll
+		Comunes\microsoft.xrm.sdk.dll = Comunes\microsoft.xrm.sdk.dll
+		Comunes\microsoft.xrm.sdk.workflow.dll = Comunes\microsoft.xrm.sdk.workflow.dll
+		Comunes\Net.SourceForge.Koogra.dll = Comunes\Net.SourceForge.Koogra.dll
+		Comunes\OfficeWebUI.dll = Comunes\OfficeWebUI.dll
+		Comunes\OneToOne.BB.Entidad.dll = Comunes\OneToOne.BB.Entidad.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Negocio", "Efika.Crm.Negocio\Efika.Crm.Negocio.csproj", "{F58FB64D-B800-40CD-94CA-75E6AB2223D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.AccesoServicios", "Efika.Crm.AccesoServicios\Efika.Crm.AccesoServicios.csproj", "{5E9B7242-BE9F-49E1-A744-A8CC90E71857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Entidades", "Efika.Crm.Entidades\Efika.Crm.Entidades.csproj", "{0C4896D8-A592-4A73-B6B9-E66A2A11274E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.CargaDatos", "Efika.Crm.CargaDatos\Efika.Crm.CargaDatos.csproj", "{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Plugins.MA", "Efika.Crm.Plugins.MA\Efika.Crm.Plugins.MA.csproj", "{28CA6504-105A-4D71-A654-11EB345C95B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Web", "Efika.Crm.Web\Efika.Crm.Web.csproj", "{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efika.Crm.Plugins.SFA", "Efika.Crm.Plugins.SFA\Efika.Crm.Plugins.SFA.csproj", "{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptsBDI", "ScriptsBDI", "{8A7CC84B-7F8C-4890-BBC9-E9734BD876C3}"
+	ProjectSection(SolutionItems) = preProject
+		ScriptsBDI\CalculaContingenteLineasCredito.sql = ScriptsBDI\CalculaContingenteLineasCredito.sql
+		ScriptsBDI\CalculaContingenteMargenesCredito.sql = ScriptsBDI\CalculaContingenteMargenesCredito.sql
+		ScriptsBDI\fn_sp_boleta_garantia.sql = ScriptsBDI\fn_sp_boleta_garantia.sql
+		ScriptsBDI\fn_sp_capital_operaciones.sql = ScriptsBDI\fn_sp_capital_operaciones.sql
+		ScriptsBDI\fn_sp_caractesp.sql = ScriptsBDI\fn_sp_caractesp.sql
+		ScriptsBDI\fn_sp_cliente_estado_vencido.sql = ScriptsBDI\fn_sp_cliente_estado_vencido.sql
+		ScriptsBDI\fn_sp_ingprod.sql = ScriptsBDI\fn_sp_ingprod.sql
+		ScriptsBDI\fn_sp_ingviv.sql = ScriptsBDI\fn_sp_ingviv.sql
+		ScriptsBDI\fn_sp_menorvalor.sql = ScriptsBDI\fn_sp_menorvalor.sql
+		ScriptsBDI\fn_sp_parametro_mony.sql = ScriptsBDI\fn_sp_parametro_mony.sql
+		ScriptsBDI\fn_sp_porcrelac.sql = ScriptsBDI\fn_sp_porcrelac.sql
+		ScriptsBDI\fn_sp_prodhom.sql = ScriptsBDI\fn_sp_prodhom.sql
+		ScriptsBDI\fn_sp_rangoing.sql = ScriptsBDI\fn_sp_rangoing.sql
+		ScriptsBDI\fn_sp_tasdesreal.sql = ScriptsBDI\fn_sp_tasdesreal.sql
+		ScriptsBDI\fn_sp_tipogarantia.sql = ScriptsBDI\fn_sp_tipogarantia.sql
+		ScriptsBDI\fn_sp_totalgarantia.sql = ScriptsBDI\fn_sp_totalgarantia.sql
+		ScriptsBDI\fn_sp_valida_dependiente.sql = ScriptsBDI\fn_sp_valida_dependiente.sql
+		ScriptsBDI\fn_sp_variabilidadTRE.sql = ScriptsBDI\fn_sp_variabilidadTRE.sql
+		ScriptsBDI\Script_DDL_BDI.sql = ScriptsBDI\Script_DDL_BDI.sql
+		ScriptsBDI\sp_calcula_cem_actual.sql = ScriptsBDI\sp_calcula_cem_actual.sql
+		ScriptsBDI\sp_calcula_cem_actual_oportunidad.sql = ScriptsBDI\sp_calcula_cem_actual_oportunidad.sql
+		ScriptsBDI\sp_consulta_formulario_propuesta.sql = ScriptsBDI\sp_consulta_formulario_propuesta.sql
+		ScriptsBDI\sp_consulta_formulario_solicitud.sql = ScriptsBDI\sp_consulta_formulario_solicitud.sql
+		ScriptsBDI\sp_evaluacion_cred.sql = ScriptsBDI\sp_evaluacion_cred.sql
+		ScriptsBDI\sp_flujocaja.sql = ScriptsBDI\sp_flujocaja.sql
+		ScriptsBDI\sp_garantia.sql = ScriptsBDI\sp_garantia.sql
+		ScriptsBDI\sp_maximo_endeudamiento.sql = ScriptsBDI\sp_maximo_endeudamiento.sql
+		ScriptsBDI\sp_porc_cuotas_ingreso_actual.sql = ScriptsBDI\sp_porc_cuotas_ingreso_actual.sql
+		ScriptsBDI\sp_porc_cuotas_ingreso_actual_consumo.sql = ScriptsBDI\sp_porc_cuotas_ingreso_actual_consumo.sql
+		ScriptsBDI\sp_procesamiento_score.sql = ScriptsBDI\sp_procesamiento_score.sql
+		ScriptsBDI\sp_servicio_deudas.sql = ScriptsBDI\sp_servicio_deudas.sql
+		ScriptsBDI\sp_servicio_deudas_consumo.sql = ScriptsBDI\sp_servicio_deudas_consumo.sql
+		ScriptsBDI\sp_servicio_deudas_fsc.sql = ScriptsBDI\sp_servicio_deudas_fsc.sql
+		ScriptsBDI\sp_simulador_pago.sql = ScriptsBDI\sp_simulador_pago.sql
+		ScriptsBDI\sp_sincronizar_moneda_cliente.sql = ScriptsBDI\sp_sincronizar_moneda_cliente.sql
+		ScriptsBDI\spCalculaMargenCredito.sql = ScriptsBDI\spCalculaMargenCredito.sql
+		ScriptsBDI\spCalculaOfertaValorBMSC.sql = ScriptsBDI\spCalculaOfertaValorBMSC.sql
+		ScriptsBDI\spCalculaOfertaValorBMSCLotes.sql = ScriptsBDI\spCalculaOfertaValorBMSCLotes.sql
+		ScriptsBDI\spConciliacionOportunidad.sql = ScriptsBDI\spConciliacionOportunidad.sql
+		ScriptsBDI\spDatosAddServiUnikClient.sql = ScriptsBDI\spDatosAddServiUnikClient.sql
+		ScriptsBDI\spDatosTipoCliente.sql = ScriptsBDI\spDatosTipoCliente.sql
+		ScriptsBDI\spDatosTipoIdentificacionCliente.sql = ScriptsBDI\spDatosTipoIdentificacionCliente.sql
+		ScriptsBDI\spDatosTipoTrabajoCliente.sql = ScriptsBDI\spDatosTipoTrabajoCliente.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0D072900-5D8C-4B97-815D-9E29964A20C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7D62902A-B9E3-4AB7-893A-6F5BED55183F}.Release|x86.ActiveCfg = Release|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F58FB64D-B800-40CD-94CA-75E6AB2223D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5E9B7242-BE9F-49E1-A744-A8CC90E71857}.Release|x86.ActiveCfg = Release|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0C4896D8-A592-4A73-B6B9-E66A2A11274E}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D8C53EFE-BB02-406A-A69D-EDB6323CE28F}.Release|x86.ActiveCfg = Release|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{28CA6504-105A-4D71-A654-11EB345C95B4}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{530ADA01-D3B2-4CC4-A888-ADF0DD9B8E52}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

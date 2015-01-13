@@ -1,0 +1,61 @@
+﻿h4
+{
+    color: #3B3B3B;
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#divControles
+{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #B6BABF;
+    background: #F6F8FA;
+    
+}
+
+.crmTable
+{
+    width:100%;
+   border:1px solid #999999;
+}
+
+.crmTableHeader
+{
+ background: #f0f0f0 url('../Images/crmTblHdrBg.png') repeat-x right top;
+ font-family:Tahoma;
+ font-size:10px;
+ font-weight:lighter;
+ border-bottom-color:#999999;
+ border-left-color:#d4d0c8;
+ border-right-color:#d4d0c8;
+ border-top-color:#d4d0c8;
+ 
+}
+
+.crmTableHeader2
+{
+ background: #f0f0f0 url('../Images/crmTblHdrBg2.png') repeat-x right top;
+ font-family:Tahoma;
+ font-size:10px;
+ font-weight:lighter;
+ border-bottom-color:#999999;
+ border-left-color:#d4d0c8;
+ border-right-color:#d4d0c8;
+ border-top-color:#d4d0c8;
+ 
+}
+
+
+.crmTableRow
+{
+    background: #fff;
+    border-bottom-color:#DBDEE1;
+    padding: 5px 2px;
+}
+
+
+

@@ -1,0 +1,7 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Release\Efika.Crm.CargaDatos.dll.config
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Release\Efika.Crm.CargaDatos.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Release\Efika.Crm.CargaDatos.XmlSerializers.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Release\Efika.Crm.CargaDatos.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\obj\Release\Efika.Crm.CargaDatos.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\obj\Release\Efika.Crm.CargaDatos.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\obj\Release\Efika.Crm.CargaDatos.XmlSerializers.dll

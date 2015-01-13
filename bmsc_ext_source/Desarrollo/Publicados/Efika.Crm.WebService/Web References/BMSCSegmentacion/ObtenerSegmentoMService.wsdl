@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="ObtenerSegmento" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="ObtenerSegmento" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="ObtenerSegmento">
+      <s:element name="ObtenerSegmentoM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputParameters" type="tns:InputParametersM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputParametersM">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="pMoneda" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pTipoIngreso" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="pIngreso" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pContrasena" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pDominio" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerSegmentoMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerSegmentoMResult" type="tns:OutputParametersM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputParametersM">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="pSegmento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="pResultado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="pMensaje" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerSegmentoMSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerSegmentoM" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSegmentoMSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerSegmentoMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ObtenerSegmentoMServiceSoap">
+    <wsdl:operation name="ObtenerSegmentoM">
+      <wsdl:input message="tns:ObtenerSegmentoMSoapIn" />
+      <wsdl:output message="tns:ObtenerSegmentoMSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObtenerSegmentoMServiceSoap" type="tns:ObtenerSegmentoMServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerSegmentoM">
+      <soap:operation soapAction="ObtenerSegmento/ObtenerSegmentoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ObtenerSegmentoMServiceSoap12" type="tns:ObtenerSegmentoMServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerSegmentoM">
+      <soap12:operation soapAction="ObtenerSegmento/ObtenerSegmentoM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObtenerSegmentoMService">
+    <wsdl:port name="ObtenerSegmentoMServiceSoap" binding="tns:ObtenerSegmentoMServiceSoap">
+      <soap:address location="http://192.168.1.191:9091/wstest/ObtenerSegmento/ObtenerSegmentoMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ObtenerSegmentoMServiceSoap12" binding="tns:ObtenerSegmentoMServiceSoap12">
+      <soap12:address location="http://192.168.1.191:9091/wstest/ObtenerSegmento/ObtenerSegmentoMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

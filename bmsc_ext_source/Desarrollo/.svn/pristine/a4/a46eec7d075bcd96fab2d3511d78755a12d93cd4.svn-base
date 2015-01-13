@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="/bmsc/crm" elementFormDefault="qualified" targetNamespace="/bmsc/crm" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="obtenerTasa_request">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pTipoCliente" type="xsd:string" />
+        <xsd:element name="pSegmentoCliente" type="xsd:string" />
+        <xsd:element name="pMonedaOperacion" type="xsd:string" />
+        <xsd:element name="pProducto" type="xsd:string" />
+        <xsd:element name="pUsuario" type="xsd:string" />
+        <xsd:element name="pContrasena" type="xsd:string" />
+        <xsd:element name="pDominio" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerTasa_response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pMensaje" type="xsd:string" />
+        <xsd:element name="pRespuesta" type="xsd:integer" />
+        <xsd:element maxOccurs="unbounded" name="pResultado" type="Result" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="Result">
+    <xsd:sequence>
+      <xsd:element name="Campo" type="xsd:string" />
+      <xsd:element name="Valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

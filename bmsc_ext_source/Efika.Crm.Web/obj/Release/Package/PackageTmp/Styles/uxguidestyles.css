@@ -1,0 +1,151 @@
+﻿body {
+	font-family: "segoe ui";
+	height:100%;
+	font-size: .75em;
+	margin-left: 0; 
+	margin-top: 0;
+	margin-right:0;
+	margin-bottom:0;
+
+}
+
+html {
+	font-family: "segoe ui";
+	height:100%;
+	font-size: .75em;
+	margin-left: 0; 
+	margin-top: 0;
+	margin-right:0;
+	margin-bottom:0;
+
+}
+
+#header  {
+				font-weight: bold;
+				height: 45px;
+				color: #FFFFFF;
+				text-align: left;
+				position: static;
+				background-image: url('../Temp/uxguidesite/titleback01.gif');
+				background-repeat: repeat-x;
+				border-bottom: 1px solid #1C537A;
+}
+
+#layouttable	{
+	width: 100%; 
+	height: 100%;
+	border:0px;
+	vertical-align:top;
+}
+
+#navcol	{
+				background-position: right;
+				vertical-align: top;
+				width: 200px;
+				padding: 10px;
+				background-color: #F1f3f5;
+				background-image: url('../Temp/uxguidesite/channel_shadow.png');
+				background-repeat: repeat-y;
+}
+#left_col {
+				border-width: 1px;
+				margin-left: 0px;
+				width: 180px;
+}
+
+#page_content {
+	vertical-align: top;
+	height: auto !important;
+	min-height: 100%;
+	padding: 10px;
+	font-size: 0.75em;
+}
+
+.navhvr { 
+	background-color: #99CCFF;
+}
+
+.node{ 
+	padding-left: 2px;
+	width:180px;
+	height:22px;
+	font-size:0.75em;
+	background-repeat:repeat-x;
+	line-height: 22px;
+	
+}
+.selnode{
+	text-decoration: underline;
+	background-color: #000000;
+	font-weight: bold;
+}
+
+.chip 		{width:50px; border:1px solid #CCCCCC; margin-bottom:5px;}
+.colorname 	{width:100px; padding-left:10px;}
+.PageTitle 	{
+				color: #009999;
+				font-size: 20px;
+}
+.PageTitlenonbold {
+	color: #333333;
+	font-size: 18px;
+	font-weight: normal;
+}
+.SubPageTitle {
+	color: #333333;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: italic;
+}
+.TableTitles {
+				border: 1px solid #C0C0C0;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 9pt;
+				padding-left: 7px;
+				font-weight: bold;
+}
+.newStyle1 {
+				border-style: solid;
+				border-width: 0px 1px 1px 1px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 9pt;
+				padding-left: 10px;
+				border-color: #C0C0C0;
+				font-weight: normal;
+				padding-right: 10px;
+}
+.ColorTable {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				padding-left: 10px;
+				font-weight: normal;
+				padding-right: 10px;
+				color: #808080;
+				height: 30px;
+				width: 100%;
+}
+.ColorTableTitles {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				padding-left: 10px;
+				font-weight: bold;
+				padding-right: 10px;
+				color: #808080;
+}
+.ColorTableTheme {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 11pt;
+				font-weight: bold;
+				color: #808080;
+				text-align: center;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: #808080;
+}
+.ColorTableTitleName {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				font-weight: bold;
+				padding-right: 10px;
+				color: #808080;
+}

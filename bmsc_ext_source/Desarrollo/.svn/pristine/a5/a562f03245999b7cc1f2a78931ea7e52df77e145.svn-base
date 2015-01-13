@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://schemas.microsoft.com/crm/2007/WebServices" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s4="http://schemas.microsoft.com/crm/2007/CoreTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://schemas.microsoft.com/crm/2006/WebServices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="http://microsoft.com/wsdl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s3="http://schemas.microsoft.com/crm/2009/WebServices" targetNamespace="http://schemas.microsoft.com/crm/2007/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2007/WebServices">
+      <s:import namespace="http://schemas.microsoft.com/crm/2006/WebServices" />
+      <s:import namespace="http://schemas.microsoft.com/crm/2009/WebServices" />
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://schemas.microsoft.com/crm/2007/CoreTypes" />
+      <s:element name="Execute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="tns:MetadataServiceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetadataServiceRequest" abstract="true" />
+      <s:complexType name="GetValidManyToManyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetValidReferencedEntitiesRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencingEntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetValidReferencingEntitiesRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencedEntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CanBeReferencingRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CanBeReferencedRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsertStatusValueRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Label" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="StateCode" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmLabel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocLabels" type="tns:ArrayOfLocLabel" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocLabel" type="tns:LocLabel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLocLabel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LocLabel" type="tns:LocLabel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LocLabel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s1:CrmNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RetrieveAllEntitiesRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MetadataItems" type="tns:MetadataItems" />
+              <s:element minOccurs="1" maxOccurs="1" name="RetrieveAsIfPublished" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="MetadataItems">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="EntitiesOnly" />
+              <s:enumeration value="IncludeAttributes" />
+              <s:enumeration value="IncludePrivileges" />
+              <s:enumeration value="IncludeRelationships" />
+              <s:enumeration value="All" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="OrderOptionRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfInt" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DeleteOptionValueRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateOptionValueRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Label" type="tns:CrmLabel" />
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MergeLabels" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsertOptionValueRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Label" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteRelationshipRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateRelationshipRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="tns:RelationshipMetadata" />
+              <s:element minOccurs="1" maxOccurs="1" name="MergeLabels" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RelationshipMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SchemaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCustomRelationship" type="s1:CrmBoolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RelationshipType" type="tns:EntityRelationshipType" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsValidForAdvancedFind" type="s1:CrmBoolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="SecurityType" type="tns:SecurityTypes" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmMetadata" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MetadataId" type="s1:Key" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntityMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SchemaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ObjectTypeCode" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayCollectionName" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCustomEntity" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCustomizable" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsAvailableOffline" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsIntersect" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CanTriggerWorkflow" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="WorkflowSupport" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="DuplicateDetection" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCollaboration" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="AutoRouteToOwnerQueue" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsConnectionsEnabled" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IconLargeName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IconMediumName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IconSmallName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsMailMergeEnabled" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsAuditEnabled" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsImportable" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsChildEntity" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReportViewName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryField" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OwnershipType" type="tns:CrmOwnershipTypes" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDocumentManagementEnabled" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Attributes" type="tns:ArrayOfAttributeMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="ManyToOneRelationships" type="tns:ArrayOfOneToManyMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="OneToManyRelationships" type="tns:ArrayOfOneToManyMetadata1" />
+              <s:element minOccurs="0" maxOccurs="1" name="Privileges" type="tns:ArrayOfSecurityPrivilegeMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="ManyToManyRelationships" type="tns:ArrayOfManyToManyMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActivity" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActivityParty" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsEnabledForCharts" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsValidForAdvancedFind" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecurrenceBaseEntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActivityTypeMask" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmOwnershipTypes">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:OwnershipTypes" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmNullable" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IsNull" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CrmPrivilegeType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:PrivilegeType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="PrivilegeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Create" />
+          <s:enumeration value="Read" />
+          <s:enumeration value="Write" />
+          <s:enumeration value="Delete" />
+          <s:enumeration value="Assign" />
+          <s:enumeration value="Share" />
+          <s:enumeration value="Append" />
+          <s:enumeration value="AppendTo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmDateTimeFormat">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:DateTimeFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="DateTimeFormat">
+        <s:restriction base="s:string">
+          <s:enumeration value="DateOnly" />
+          <s:enumeration value="DateAndTime" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmStringFormat">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:StringFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="StringFormat">
+        <s:restriction base="s:string">
+          <s:enumeration value="Email" />
+          <s:enumeration value="Text" />
+          <s:enumeration value="TextArea" />
+          <s:enumeration value="Url" />
+          <s:enumeration value="TickerSymbol" />
+          <s:enumeration value="PhoneticGuide" />
+          <s:enumeration value="VersionNumber" />
+          <s:enumeration value="Phone" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmIntegerFormat">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:IntegerFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="IntegerFormat">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Duration" />
+          <s:enumeration value="TimeZone" />
+          <s:enumeration value="Language" />
+          <s:enumeration value="Locale" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmImeMode">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:ImeMode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="ImeMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Auto" />
+          <s:enumeration value="Inactive" />
+          <s:enumeration value="Active" />
+          <s:enumeration value="Disabled" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmDisplayMasks">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:DisplayMasks" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="DisplayMasks">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="PrimaryName" />
+              <s:enumeration value="ObjectTypeCode" />
+              <s:enumeration value="ValidForAdvancedFind" />
+              <s:enumeration value="ValidForForm" />
+              <s:enumeration value="ValidForGrid" />
+              <s:enumeration value="RequiredForForm" />
+              <s:enumeration value="RequiredForGrid" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="CrmAttributeRequiredLevel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:AttributeRequiredLevel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AttributeRequiredLevel">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="SystemRequired" />
+          <s:enumeration value="Required" />
+          <s:enumeration value="Recommended" />
+          <s:enumeration value="ReadOnly" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmAttributeType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:AttributeType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AttributeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="DateTime" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Internal" />
+          <s:enumeration value="Lookup" />
+          <s:enumeration value="Memo" />
+          <s:enumeration value="Money" />
+          <s:enumeration value="Owner" />
+          <s:enumeration value="PartyList" />
+          <s:enumeration value="Picklist" />
+          <s:enumeration value="PrimaryKey" />
+          <s:enumeration value="State" />
+          <s:enumeration value="Status" />
+          <s:enumeration value="String" />
+          <s:enumeration value="UniqueIdentifier" />
+          <s:enumeration value="Virtual" />
+          <s:enumeration value="CalendarRules" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmCascadeType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:CascadeType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="CascadeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NoCascade" />
+          <s:enumeration value="Cascade" />
+          <s:enumeration value="Active" />
+          <s:enumeration value="UserOwned" />
+          <s:enumeration value="RemoveLink" />
+          <s:enumeration value="Restrict" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmAssociatedMenuGroup">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:AssociatedMenuGroup" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AssociatedMenuGroup">
+        <s:restriction base="s:string">
+          <s:enumeration value="Details" />
+          <s:enumeration value="Sales" />
+          <s:enumeration value="Service" />
+          <s:enumeration value="Marketing" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CrmAssociatedMenuBehavior">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="tns:AssociatedMenuBehavior" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AssociatedMenuBehavior">
+        <s:restriction base="s:string">
+          <s:enumeration value="UseCollectionName" />
+          <s:enumeration value="UseLabel" />
+          <s:enumeration value="DoNotDisplay" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="OwnershipTypes">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="UserOwned" />
+              <s:enumeration value="TeamOwned" />
+              <s:enumeration value="BusinessOwned" />
+              <s:enumeration value="OrgOwned" />
+              <s:enumeration value="BusinessParented" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAttributeMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute" type="tns:AttributeMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SchemaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeType" type="tns:CrmAttributeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCustomField" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="RequiredLevel" type="tns:CrmAttributeRequiredLevel" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValidForCreate" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValidForRead" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValidForUpdate" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayMask" type="tns:CrmDisplayMasks" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s3:IsLogical" />
+              <s:element minOccurs="0" maxOccurs="1" name="AggregateOf" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeOf" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="YomiOf" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CalculationOf" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsAuditEnabled" type="s1:CrmBoolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="LinkedAttributeId" nillable="true" type="s2:guid" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s3:ColumnNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LookupAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Targets" type="tns:ArrayOfString" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Target" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DateTimeAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:CrmDateTimeFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="ImeMode" type="tns:CrmImeMode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MemoAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:CrmStringFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxLength" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ImeMode" type="tns:CrmImeMode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StringAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:CrmStringFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxLength" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ImeMode" type="tns:CrmImeMode" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatabaseLength" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DecimalAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="tns:CrmDouble" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="tns:CrmDouble" />
+              <s:element minOccurs="0" maxOccurs="1" name="Precision" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmDouble">
+        <s:simpleContent>
+          <s:extension base="s:double">
+            <s:attribute name="IsNull" type="s:boolean" />
+            <s:attribute name="formattedvalue" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="FloatAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="s1:CrmFloat" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="s1:CrmFloat" />
+              <s:element minOccurs="0" maxOccurs="1" name="Precision" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ImeMode" type="tns:CrmImeMode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IntegerAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:CrmIntegerFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EnumAttributeMetadata" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s3:OptionSet" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Option">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:CrmNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="tns:CrmLabel" />
+          <s:element minOccurs="0" maxOccurs="1" ref="s3:Description" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusOption">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Option">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StateOption">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Option">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultStatus" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvariantName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BooleanAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EnumAttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TrueOption" type="tns:Option" />
+              <s:element minOccurs="0" maxOccurs="1" name="FalseOption" type="tns:Option" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StatusAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EnumAttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfStatusOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfStatusOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StatusOption" type="tns:StatusOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StateAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EnumAttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfStateOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfStateOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StateOption" type="tns:StateOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PicklistAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EnumAttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Option" type="tns:Option" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MoneyAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="tns:CrmDouble" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="tns:CrmDouble" />
+              <s:element minOccurs="0" maxOccurs="1" name="Precision" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrecisionSource" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ImeMode" type="tns:CrmImeMode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOneToManyMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="From" type="tns:OneToManyMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OneToManyMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RelationshipMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeAssign" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeDelete" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeMerge" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeReparent" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeShare" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CascadeUnshare" type="tns:CrmCascadeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencedAttribute" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencedEntity" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencingAttribute" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferencingEntity" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssociatedMenuBehavior" type="tns:CrmAssociatedMenuBehavior" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssociatedMenuGroup" type="tns:CrmAssociatedMenuGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssociatedMenuOrder" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssociatedMenuLabel" type="tns:CrmLabel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOneToManyMetadata1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="To" type="tns:OneToManyMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSecurityPrivilegeMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Privilege" type="tns:SecurityPrivilegeMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SecurityPrivilegeMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrivilegeId" type="s1:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrivilegeType" type="tns:CrmPrivilegeType" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanBeBasic" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanBeLocal" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanBeDeep" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanBeGlobal" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfManyToManyMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Intersect" type="tns:ManyToManyMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ManyToManyMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RelationshipMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1LogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2LogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IntersectEntityName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1IntersectAttribute" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2IntersectAttribute" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1AssociatedMenuBehavior" type="tns:CrmAssociatedMenuBehavior" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1AssociatedMenuLabel" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2AssociatedMenuBehavior" type="tns:CrmAssociatedMenuBehavior" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2AssociatedMenuLabel" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1AssociatedMenuGroup" type="tns:CrmAssociatedMenuGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2AssociatedMenuGroup" type="tns:CrmAssociatedMenuGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity1AssociatedMenuOrder" type="s1:CrmNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entity2AssociatedMenuOrder" type="s1:CrmNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="EntityRelationshipType">
+        <s:restriction base="s:string">
+          <s:enumeration value="OneToMany" />
+          <s:enumeration value="ManyToMany" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SecurityTypes">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="Append" />
+              <s:enumeration value="ParentChild" />
+              <s:enumeration value="Pointer" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="RetrieveRelationshipRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MetadataId" type="s2:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RetrieveAsIfPublished" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateManyToManyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ManyToManyRelationship" type="tns:ManyToManyMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="IntersectEntitySchemaName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateOneToManyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="OneToManyRelationship" type="tns:OneToManyMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="Lookup" type="tns:LookupAttributeMetadata" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveAttributeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MetadataId" type="s2:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RetrieveAsIfPublished" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteAttributeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityLogicalName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateAttributeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Attribute" type="tns:AttributeMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MergeLabels" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateAttributeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Attribute" type="tns:AttributeMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveEntityRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MetadataId" type="s2:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="EntityItems" type="tns:EntityItems" />
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RetrieveAsIfPublished" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="EntityItems">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="EntityOnly" />
+              <s:enumeration value="IncludeAttributes" />
+              <s:enumeration value="IncludePrivileges" />
+              <s:enumeration value="IncludeRelationships" />
+              <s:enumeration value="All" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="DeleteEntityRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LogicalName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateEntityRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Entity" type="tns:EntityMetadata" />
+              <s:element minOccurs="1" maxOccurs="1" name="MergeLabels" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateEntityRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Entity" type="tns:EntityMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryAttribute" type="tns:StringAttributeMetadata" />
+              <s:element minOccurs="1" maxOccurs="1" name="HasNotes" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="HasActivities" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CanManyToManyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveTimestampRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MetadataServiceResponse" abstract="true" />
+      <s:complexType name="CanManyToManyResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CanManyToMany" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetValidManyToManyResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityNames" type="tns:ArrayOfString1" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfString1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetValidReferencedEntitiesResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityNames" type="tns:ArrayOfString1" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetValidReferencingEntitiesResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityNames" type="tns:ArrayOfString1" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CanBeReferencingResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CanBeReferencing" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CanBeReferencedResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CanBeReferenced" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsertStatusValueResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NewOptionValue" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveAllEntitiesResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CrmMetadata" type="tns:ArrayOfCrmMetadata" />
+              <s:element minOccurs="0" maxOccurs="1" name="Timestamp" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfCrmMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CrmMetadata" nillable="true" type="tns:CrmMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderOptionResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteOptionValueResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateOptionValueResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteRelationshipResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateRelationshipResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveRelationshipResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RelationshipMetadata" type="tns:RelationshipMetadata" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateManyToManyResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ManyToManyRelationshipId" type="s1:Key" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateOneToManyResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RelationshipId" type="s1:Key" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeId" type="s1:Key" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveAttributeResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeMetadata" type="tns:AttributeMetadata" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteAttributeResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateAttributeResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateAttributeResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeId" type="s1:Key" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveEntityResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityMetadata" type="tns:EntityMetadata" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteEntityResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateEntityResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateEntityResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityId" type="s1:Key" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttributeId" type="s1:Key" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RetrieveTimestampResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Timestamp" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsertOptionValueResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MetadataServiceResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NewOptionValue" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Response" type="tns:MetadataServiceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrmAuthenticationToken" type="s4:CrmAuthenticationToken" />
+      <s:element name="CallerOriginToken" type="s4:CallerOriginToken" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2006/WebServices">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:complexType name="CrmNumber">
+        <s:simpleContent>
+          <s:extension base="s:int">
+            <s:attribute name="IsNull" type="s:boolean" />
+            <s:attribute name="formattedvalue" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="Key">
+        <s:simpleContent>
+          <s:extension base="s2:guid" />
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="CrmBoolean">
+        <s:simpleContent>
+          <s:extension base="s:boolean">
+            <s:attribute name="IsNull" type="s:boolean" />
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="CrmFloat">
+        <s:simpleContent>
+          <s:extension base="s:double">
+            <s:attribute name="IsNull" type="s:boolean" />
+            <s:attribute name="formattedvalue" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="CrmDateTime">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="IsNull" type="s:boolean" />
+            <s:attribute name="date" type="s:string" />
+            <s:attribute name="time" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2009/WebServices">
+      <s:import namespace="http://schemas.microsoft.com/crm/2007/WebServices" />
+      <s:import namespace="http://schemas.microsoft.com/crm/2006/WebServices" />
+      <s:complexType name="CrmOptionSetType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmNullable">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Value" type="s3:OptionSetType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="OptionSetType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Picklist" />
+          <s:enumeration value="State" />
+          <s:enumeration value="Status" />
+          <s:enumeration value="Boolean" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="IsLogical" type="s1:CrmBoolean" />
+      <s:element name="ColumnNumber" type="s1:CrmNumber" />
+      <s:element name="OptionSet" type="s3:OptionSetMetadata" />
+      <s:complexType name="OptionSetMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CrmMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OptionSetType" type="s3:CrmOptionSetType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="s3:ArrayOfOption" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsGlobal" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCustomOptionSet" type="s1:CrmBoolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="tns:CrmLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:CrmLabel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Option" type="tns:Option" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Description" type="tns:CrmLabel" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2007/CoreTypes">
+      <s:import namespace="http://schemas.microsoft.com/crm/2006/WebServices" />
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:complexType name="CallerOrigin" abstract="true" />
+      <s:complexType name="WebServiceApiOrigin">
+        <s:complexContent mixed="false">
+          <s:extension base="s4:CallerOrigin" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AsyncServiceOrigin">
+        <s:complexContent mixed="false">
+          <s:extension base="s4:CallerOrigin" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ApplicationOrigin">
+        <s:complexContent mixed="false">
+          <s:extension base="s4:CallerOrigin" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="OfflineOrigin">
+        <s:complexContent mixed="false">
+          <s:extension base="s4:CallerOrigin">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="OfflineTimestamp" type="s1:CrmDateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CrmAuthenticationToken">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AuthenticationType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CrmTicket" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrganizationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CallerId" type="s2:guid" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="CallerOriginToken">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CallerOrigin" type="s4:CallerOrigin" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCrmAuthenticationToken">
+    <wsdl:part name="CrmAuthenticationToken" element="tns:CrmAuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCallerOriginToken">
+    <wsdl:part name="CallerOriginToken" element="tns:CallerOriginToken" />
+  </wsdl:message>
+  <wsdl:portType name="MetadataServiceSoap">
+    <wsdl:operation name="Execute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executes metadata request.</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteSoapIn" />
+      <wsdl:output message="tns:ExecuteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MetadataServiceSoap" type="tns:MetadataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap:operation soapAction="http://schemas.microsoft.com/crm/2007/WebServices/Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ExecuteCrmAuthenticationToken" part="CrmAuthenticationToken" use="literal" />
+        <soap:header message="tns:ExecuteCallerOriginToken" part="CallerOriginToken" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MetadataServiceSoap12" type="tns:MetadataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap12:operation soapAction="http://schemas.microsoft.com/crm/2007/WebServices/Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ExecuteCrmAuthenticationToken" part="CrmAuthenticationToken" use="literal" />
+        <soap12:header message="tns:ExecuteCallerOriginToken" part="CallerOriginToken" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MetadataService">
+    <wsdl:port name="MetadataServiceSoap" binding="tns:MetadataServiceSoap">
+      <soap:address location="http://172.16.4.252:5555/mscrmservices/2007/MetaDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MetadataServiceSoap12" binding="tns:MetadataServiceSoap12">
+      <soap12:address location="http://172.16.4.252:5555/mscrmservices/2007/MetaDataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/bmsc/crm/ObtenerTasaService" xmlns:inp1="/bmsc/crm" name="ObtenerTasaService" targetNamespace="/bmsc/crm/ObtenerTasaService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>https://serviciostest.bmsc.com.bo:443/soa-infra/services/crm/pjtObtenerTasaSCA!1.0/ObtenerTasaService.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://serviciostest.bmsc.com.bo:443/soa-infra/services/crm/pjtObtenerTasaSCA/ObtenerTasaService?XSD=xsd/ObtenerTasa.xsd" namespace="/bmsc/crm" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestMessage">
+    <wsdl:part name="REQUEST" element="inp1:obtenerTasa_request" />
+  </wsdl:message>
+  <wsdl:message name="replyMessage">
+    <wsdl:part name="RESPONSE" element="inp1:obtenerTasa_response" />
+  </wsdl:message>
+  <wsdl:portType name="ObtenerTasa_ptt">
+    <wsdl:operation name="ObtenerTasa">
+      <wsdl:input message="tns:requestMessage" />
+      <wsdl:output message="tns:replyMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObtenerTasa_pttBinding" type="tns:ObtenerTasa_ptt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerTasa">
+      <soap:operation soapAction="ObtenerTasa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObtenerTasaService">
+    <wsdl:port name="ObtenerTasa_pt" binding="tns:ObtenerTasa_pttBinding">
+      <soap:address location="https://serviciostest.bmsc.com.bo:443/soa-infra/services/crm/pjtObtenerTasaSCA/ObtenerTasaService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

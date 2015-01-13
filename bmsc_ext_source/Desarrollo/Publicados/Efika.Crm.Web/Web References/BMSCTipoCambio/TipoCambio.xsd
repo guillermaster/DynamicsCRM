@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="/bmsc/clientes/" elementFormDefault="qualified" targetNamespace="/bmsc/clientes/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TipoCambio_Request">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pUsuario" type="xsd:string" />
+        <xsd:element name="pContrasena" type="xsd:string" />
+        <xsd:element name="pDominio" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="TipoCambio_Response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pTCContable" type="xsd:decimal" />
+        <xsd:element name="pTCCompra" type="xsd:decimal" />
+        <xsd:element name="pTCVenta" type="xsd:decimal" />
+        <xsd:element name="pResultado" type="xsd:integer" />
+        <xsd:element name="pMensaje" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

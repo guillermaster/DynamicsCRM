@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D8B3F9F-AA5F-4609-94CC-7B2F6EA450B7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Testing</RootNamespace>
+    <AssemblyName>Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Program.cs" />
+    <Compile Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Properties\AssemblyInfo.cs" />
+    <Compile Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Properties\Settings.Designer.cs" />
+    <Compile Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\Reference.cs" />
+    <Compile Include="Service References\CRMSDK\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Microsoft.Xrm.Sdk.Entity.datasource" />
+    <None Include="Properties\DataSources\Microsoft.Xrm.Sdk.EntityCollection.datasource" />
+    <None Include="Properties\DataSources\Microsoft.Xrm.Sdk.OrganizationResponse.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Properties\Settings.settings" />
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\BusinessEntity.datasource" />
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\BusinessEntityCollection.datasource" />
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\CrmServiceWsdl.wsdl" />
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\Reference.map" />
+    <None Include="PruebasCRM.root\PruebasCRM\PruebasCRM\Web References\CrmSDK\Response.datasource" />
+    <None Include="Service References\CRMSDK\Organization.wsdl" />
+    <None Include="Service References\CRMSDK\OrganizationService.wsdl" />
+    <None Include="Service References\CRMSDK\Testing.CRMSDK.Entity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CRMSDK\Testing.CRMSDK.EntityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CRMSDK\Testing.CRMSDK.OrganizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CRMSDK\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRMSDK\Organization.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRMSDK\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRMSDK\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRMSDK\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PruebasCRM.root\PruebasCRM\PruebasCRM.sln" />
+    <Content Include="PruebasCRM.root\PruebasCRM\PruebasCRM\PruebasCRM.csproj" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

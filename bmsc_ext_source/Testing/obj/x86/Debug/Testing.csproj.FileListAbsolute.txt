@@ -1,0 +1,2 @@
+C:\Efika\SVN\Desarrollo\Fuentes\Testing\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Efika\SVN\Desarrollo\Fuentes\Testing\bin\Debug\Testing.exe.config

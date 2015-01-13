@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Administrator\Desktop\WebServices" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="10/11/2014 14:27:18" />
+    <file relUrl="bin/Efika.Crm.WebService.pdb" publishTime="10/10/2014 18:40:45" />
+    <file relUrl="bin/Microsoft.Xrm.Sdk.dll" publishTime="09/11/2014 14:15:28" />
+    <file relUrl="bin/Efika.Crm.Negocio.dll" publishTime="10/10/2014 18:40:42" />
+    <file relUrl="bin/Net.SourceForge.Koogra.dll" publishTime="09/11/2014 14:15:30" />
+    <file relUrl="bin/Efika.Crm.Entidades.dll" publishTime="10/10/2014 17:23:03" />
+    <file relUrl="Divisas.xml" publishTime="09/11/2014 14:06:54" />
+    <file relUrl="bin/Efika.Crm.AccesoServicios.pdb" publishTime="10/10/2014 17:23:51" />
+    <file relUrl="ProdPasivos.asmx" publishTime="09/11/2014 14:06:55" />
+    <file relUrl="Privilegios.asmx" publishTime="09/11/2014 14:06:54" />
+    <file relUrl="bin/Efika.Crm.WebService.dll" publishTime="10/10/2014 18:40:45" />
+    <file relUrl="bin/Efika.Crm.Entidades.pdb" publishTime="10/10/2014 17:23:02" />
+    <file relUrl="bin/Efika.Crm.AccesoServicios.dll" publishTime="10/10/2014 17:23:51" />
+    <file relUrl="ServiciosCarga.asmx" publishTime="09/11/2014 14:06:57" />
+    <file relUrl="Clientes.asmx" publishTime="09/11/2014 14:06:52" />
+    <file relUrl="bin/Ionic.Utils.Zip.dll" publishTime="09/11/2014 14:14:57" />
+    <file relUrl="bin/Efika.Crm.Negocio.pdb" publishTime="10/10/2014 18:40:41" />
+    <file relUrl="ConvertirMoneda.asmx" publishTime="09/11/2014 14:06:53" />
+    <file relUrl="bin/Microsoft.Crm.Sdk.Proxy.dll" publishTime="09/11/2014 14:15:23" />
+  </publishProfile>
+</publishData>

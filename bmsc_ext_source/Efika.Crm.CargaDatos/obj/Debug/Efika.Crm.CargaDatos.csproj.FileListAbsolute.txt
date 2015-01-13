@@ -1,0 +1,11 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.dll.config
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\obj\Debug\Efika.Crm.CargaDatos.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.CargaDatos\obj\Debug\Efika.Crm.CargaDatos.pdb
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.dll.config
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.dll
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\bin\Debug\Efika.Crm.CargaDatos.pdb
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\obj\Debug\ResolveAssemblyReference.cache
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\obj\Debug\Efika.Crm.CargaDatos.dll
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.CargaDatos\obj\Debug\Efika.Crm.CargaDatos.pdb

@@ -1,0 +1,12 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.AccesoServicios.dll.config
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.AccesoServicios.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.AccesoServicios.XmlSerializers.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.AccesoServicios.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\microsoft.crm.sdk.proxy.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\microsoft.xrm.sdk.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\bin\Release\Efika.Crm.Entidades.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\obj\Release\Efika.Crm.AccesoServicios.csprojResolveAssemblyReference.cache
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\obj\Release\Efika.Crm.AccesoServicios.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\obj\Release\Efika.Crm.AccesoServicios.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.AccesoServicios\obj\Release\Efika.Crm.AccesoServicios.XmlSerializers.dll

@@ -1,0 +1,15 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.Negocio.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.Negocio.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.AccesoServicios.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Ionic.Utils.Zip.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Microsoft.Crm.Sdk.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\microsoft.xrm.sdk.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Net.SourceForge.Koogra.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Microsoft.Crm.Sdk.Proxy.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.AccesoServicios.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.Entidades.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\bin\Release\Efika.Crm.AccesoServicios.XmlSerializers.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\obj\Release\Efika.Crm.Negocio.csprojResolveAssemblyReference.cache
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\obj\Release\Efika.Crm.Negocio.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Negocio\obj\Release\Efika.Crm.Negocio.pdb

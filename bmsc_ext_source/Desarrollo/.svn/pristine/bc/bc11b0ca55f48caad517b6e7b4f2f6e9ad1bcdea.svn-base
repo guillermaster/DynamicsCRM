@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Efika.Crm.Web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Efika_Crm_Web_BMSCEvaluarScoreService_EvaluarScoreService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/crm/pjtEvaluarScoreSCA/EvaluarScoreService</Value>
+    </Setting>
+    <Setting Name="Efika_Crm_Web_BMSCOnBase_CaratulaOnbaseService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.19.248:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA/CaratulaOnbaseService</Value>
+    </Setting>
+    <Setting Name="Efika_Crm_Web_BMSCTipoCambio_TipoCambioService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/clientes/pjtTipoCambioSCA/TipoCambioService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

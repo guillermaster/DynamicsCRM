@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Efika.Crm.CargaDatos.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Efika_Crm_CargaDatos_ServiciosCarga_ServiciosCarga" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8081/serviciosweb/ServiciosCarga.asmx</Value>
+    </Setting>
+    <Setting Name="Efika_Crm_CargaDatos_crmSDK_CrmService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://srvdesacrm01:5555/MSCrmServices/2007/CrmService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

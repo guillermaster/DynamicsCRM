@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28CA6504-105A-4D71-A654-11EB345C95B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Efika.Crm.Plugins.MA</RootNamespace>
+    <AssemblyName>Efika.Crm.Plugins.MA.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Efika.Crm.Plugins.MA.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Utils.Zip">
+      <HintPath>..\Comunes\Ionic.Utils.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.crm.sdk.proxy">
+      <HintPath>..\Comunes\microsoft.crm.sdk.proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk">
+      <HintPath>..\Comunes\microsoft.xrm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk.workflow">
+      <HintPath>..\Comunes\microsoft.xrm.sdk.workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.SourceForge.Koogra">
+      <HintPath>..\Comunes\Net.SourceForge.Koogra.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActividadCampania\CerrarActividadCampania.cs" />
+    <Compile Include="ActividadCampania\CerrarRespuestaCampania.cs" />
+    <Compile Include="ActividadCampania\ValidaCompletarCancelarActividad.cs" />
+    <Compile Include="ActividadCampania\ValidaRelacionActividad.cs" />
+    <Compile Include="ActividadCampania\WADistribuirActividadesCampana.cs" />
+    <Compile Include="CalculoFechaFinal.cs" />
+    <Compile Include="Campania\CierreActividadCampania.cs" />
+    <Compile Include="Campania\DetalleCostosCampania.cs" />
+    <Compile Include="Cliente\ObtenerCorreoGerenteRegional.cs" />
+    <Compile Include="DatosPreAprobados\DatoPreAprobado.cs" />
+    <Compile Include="DatosPreAprobados\ProcesarPreaprobados.cs" />
+    <Compile Include="DatosPreAprobados\WAImportarDatosPreAprobados.cs" />
+    <Compile Include="ListaMarketing\DatoListaMarketing.cs" />
+    <Compile Include="ListaMarketing\ProcesarListaMarketing.cs" />
+    <Compile Include="ListaMarketing\ValidarListaAprobada.cs" />
+    <Compile Include="ListaMarketing\AprobarListaMarketing.cs" />
+    <Compile Include="ListaMarketing\AsociarListaMarketing.cs" />
+    <Compile Include="ListaMarketing\WAImportarListaMarketing.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WACalculoFechaFinal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Efika.Crm.Plugins.MA.snk" />
+    <None Include="Efika.Crm.Plugins.MA.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\ILMerge.exe" />
+    <Content Include="bin\Debug\Ionic.Utils.Zip.dll" />
+    <Content Include="bin\Debug\Net.SourceForge.Koogra.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>ilmerge /keyfile:Efika.Crm.Plugins.MA.snk /target:library /copyattrs /targetplatform:v4,"C:\Windows\Microsoft.NET\Framework \v4.0.30319" /out:Efika.Crm.Plugins.MA.dll Ionic.Utils.Zip.dll Net.SourceForge.Koogra.dll Efika.Crm.Plugins.MA.Base.dll</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

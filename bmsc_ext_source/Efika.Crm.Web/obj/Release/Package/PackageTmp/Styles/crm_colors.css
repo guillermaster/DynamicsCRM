@@ -1,0 +1,371 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*	<Feature><Item><States>[<GradientSection>]
+
+	Feature:
+	These vary by feature
+
+	Item:
+	Ctl - Control
+	Text - Text (wow, what a concept)
+	Bkgd - Background
+	Bdr - Border
+	StrokeInner - Inner Border (for complex borders)
+	StrokeOuter - Outer Border (for complex borders)
+	Rule - A line
+	AssocList - AssociatedList
+	Titlebar - container for title text
+	Arrow
+	
+	State:
+	Disabled
+	Selected
+	Hover
+	Collapsed
+	Expanded
+	
+	Gradient Section:
+	GradientBegin - For all gradients
+	GradientEnd - For all gradients
+
+*/
+
+/*	---------- Masthead ------------ */
+
+.UserLoginText {
+	color: #000000;
+}
+.Masthead {
+	background-image: url(Mastead_White.png);
+}
+
+/*	---------- Common Elements ------------ */
+
+.Hover {
+	background-color: #A7CDF0;
+}
+
+.VerticalLine {
+	background-image: url(VerticalLine_White.png);
+}
+
+.Selected {
+	background-color: #A7CDF0;
+}
+
+.StaticText {
+	color: #3B3B3B;
+}
+
+.ViewText {
+	color: #000000;
+}
+
+.BkgdGradient {
+	background-image: url(BkgdGradient_White.png);
+}
+
+.FrameBrdr {
+	border-top-color: #A5ACB5;
+	border-bottom-color: #A5ACB5;
+	border-left-color: #A5ACB5;
+	border-right-color: #A5ACB5;
+}
+
+
+/*	---------- Form Page ------------ */
+
+.FormTitlebar {
+	background-color: #EEF1F5;
+}
+
+.FormGradientLine {
+	background-color: url(FormGradientLine_White.png);
+}
+
+.FormTab {
+	color: #15428B;
+}
+
+.FormTabExpandedArrow {
+	background-image: url(FormTabExpandedArrow_White.png);
+}
+
+.FormTabCollapsedArrow {
+	background-image: url(FormTabCollapsedArrow_White.png);
+}
+
+.FormSectionLine {
+    border-bottom-color: #C0C0C0;
+}
+
+.FormAssistantCollapsedArrow {
+	background-image: url(FormAssistantCollapsedArrow_White.png);
+}
+
+.FormAssistantCollapsedArrowHover {
+	background-image: url(FormAssistantCollapsedArrowHover_White.png);
+}
+
+.FormAssistantExpandedArrow {
+	background-image: url(FormAssistantExpandedArrow_White.png);
+}
+
+.FormAssistantExpandedArrowHover {
+	background-image: url(FormAssistantExpandedArrowHover_White.png);
+}
+
+
+
+/*	---------- Wunderbar ------------ */
+
+
+.WunderbarText {
+	color: #000000;
+}
+
+.WunderbarSelected_Left {
+	background-image: url(WunderbarSelectedLeft_White.png);
+}
+
+.WunderbarSelected_Middle {
+	background-image: url(WunderbarSelectedMiddle_White.png);
+}
+
+.WunderbarSelected_Right {
+	background-image: url(WunderbarSelectedRight_White.png);
+}
+
+.WunderbarHover_Left {
+	background-image: url(WunderbarHoverLeft_White.png);
+}
+
+.WunderbarHover_Middle {
+	background-image: url(WunderbarHover_Middle_White.png);
+}
+
+.WunderbarHover_Right {
+	background-image: url(WunderbarHover_Right_White.png);
+}
+
+/*	---------- Visor ------------ */
+
+.VisorText {
+	color: #4F7B53;
+}
+
+.VisorDescription {
+	color: #3b3b3b;
+}
+
+.VisorActionText {
+	color:
+}
+
+.VisorDocumentText {
+	color:
+}
+
+.VisorColumn1Title {
+	background-image:
+}
+
+.VisorColumn2Title {
+	background-image:
+}
+
+.VisorColumn3Title {
+	background-image:
+}
+
+/*	---------- Header ------------ */
+
+.HeaderCollapsed {
+	background-image: url(HeaderCollapsed_White.png);
+}
+
+.HeaderCollapsedHover {
+	background-image: url HeaderCollapsedHover_White.png);
+}
+
+.HeaderExpanded {
+	background-image: url(HeaderExpanded_White.png);
+}
+
+.HeaderExpandedHover {
+	background-image: url(HeaderExpandedHover_White.png);
+}
+
+/*	---------- Navigation ------------ */
+
+.NavGroupText {
+	color: #3B3B3B;
+}
+
+.FormNavTabLinks {
+	background-color: #15428B;
+}
+
+.NavExpandedArrow {
+	background-image: url(NavExpandedArrow_White.png);
+}
+
+.NavCollapedArrow {
+	background-image: url(NavCollpasedArrpw_White.png);
+}
+
+.FormNavTreeTop {
+	background-image: url(FormNavTreeTop_White.png);
+}
+
+.FormNavTreeMiddle {
+	background-image: url(FormNavTreeMiddle_White.png);
+}
+
+.FormNavItemTreeLineBottom {
+	background-image: url(FormNavTreeBottom_White.png);
+}
+
+
+/*	---------- Record Set Navigation ------------ */
+
+.RecordSetButton {
+	color: #      ;
+}
+.RecordSetButtonHoverOver {
+	color: #      ;
+}
+.RecordSetButtonSelected {
+	background-color: #      ;
+}
+.RecordSetButton_LeftCap {
+	color: #      ;
+}
+.RecordSetButtonHover_LeftCap {
+	color: #      ;
+}
+.RecordSetButtonSelected_LeftCap {
+	background-color: #      ;
+}
+.RecordSetButton_DropdownArrow {
+	background-image: 
+}
+.RecordSetButton_DropdownArrow_Disabled {
+	background-image: 
+}
+.RecordSetUpButton {
+	background-color: 
+	border-top-color: #      ;
+	border-top-color: #      ;
+}
+.RecordSetUpButtonHover {
+	background-color: 
+	border-top-color: #      ;
+	border-top-color: #      ;
+}
+.RecordSetButton_DropdownArrow_Disabled {
+	background-image: 
+}
+
+
+
+/*	---------- Grids ------------ */
+
+.GridFilterBkgd {
+	background-color: #EAEFFA;
+}
+
+.GridColumnGraident {
+	background-image: url(GridColumnGradient_White.png);
+}
+
+.GridColumnGraidentHover {
+	background-image: url(GridColumnGradientHover_White.png);
+}
+
+.GridColumnUpArrow {
+	background-image: url(GridColumnUpArrow_White.png);
+}
+
+.GridColumnDownArrow {
+	background-image: url(GridColumnDownArrow_White.png);
+}
+
+.JumpbarRewindArrow {
+	background-image: url(JumpbarRewindArrow_White.png);
+}
+
+.JumpbarBackArrow {
+	background-image: url(JumpbarBackArrow_White.png);
+}
+
+.JumpbarForwardArrow {
+	background-image: url(JumpbarForwardArrow_White.png);
+}
+
+.JumpbarRewindArrowDisabled {
+	background-image: url(JumpbarRewindArrowDisabled_White.png);
+}
+
+.JumpbarBackArrowDisabled {
+	background-image: url(JumpbarBackArrowDisabled_White.png);
+}
+
+.JumpbarForwardArrowDisabled {
+	background-image: url(JumpbarForwardArrowDisabled_White.png);
+}
+
+
+
+/*	---------- Scrollbar ------------ */
+
+.Scrollbar { 
+scrollbar-3dlight-color:          ; 
+scrollbar-arrow-color:         ; 
+scrollbar-base-color:          ; 
+scrollbar-darkshadow-color:       ; 
+scrollbar-face-color:         ; 
+scrollbar-highlight-color:    ; 
+scrollbar-shadow-color:         ; 
+scrollbar-track-color:        ; 
+} 
+
+
+/*	---------- Dialog ------------ */
+
+
+.DialogTitlebarBkgd {
+	background-color: #A5ACB5;
+} 
+
+.DialogBkgd {
+	background-color: #F1F3F5;
+} 
+
+.DialogTitlebarText {
+	color: #FFFFFF;
+} 
+
+.DialogText {
+	color: #3B3B3B;
+} 
+
+.DialogButtonLeft {
+	background-image: url(DialogButtonLeft_White.png);
+} 
+
+.DialogButtonMiddle {
+	background-image: url(DialogButtonMiddle_White.png);
+} 
+
+.DialogButtonRight {
+	background-image: url(DialogButtonRight_White.png);
+} 
+
+
+
+
+
+
+

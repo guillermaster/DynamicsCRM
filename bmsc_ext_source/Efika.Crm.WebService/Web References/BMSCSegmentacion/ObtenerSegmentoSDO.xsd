@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:db="ObtenerSegmento" elementFormDefault="qualified" targetNamespace="ObtenerSegmento" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element db:index="1" db:type="NUMBER" minOccurs="0" name="pTipoIngreso" nillable="true" type="decimal" />
+        <element db:index="2" db:type="NUMBER" minOccurs="0" name="pIngreso" nillable="true" type="decimal" />
+        <element name="pUsuario" type="string" />
+        <element name="pContrasena" type="string" />
+        <element name="pDominio" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element db:index="0" db:type="NUMBER" minOccurs="0" name="pResultado" nillable="true" type="decimal" />
+        <element db:index="3" db:type="NUMBER" minOccurs="0" name="pSegmento" nillable="true" type="decimal" />
+        <element db:index="4" db:type="VARCHAR2" minOccurs="0" name="pMensaje" nillable="true" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+</schema>

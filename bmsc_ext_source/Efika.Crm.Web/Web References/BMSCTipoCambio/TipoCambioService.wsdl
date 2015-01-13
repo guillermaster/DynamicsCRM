@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/bmsc/Clientes/TipoCambioService" xmlns:inp1="/bmsc/clientes/" name="TipoCambioService" targetNamespace="/bmsc/Clientes/TipoCambioService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/clientes/pjtTipoCambioSCA!1.0/TipoCambioService.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/clientes/pjtTipoCambioSCA/TipoCambioService?XSD=xsd/TipoCambio.xsd" namespace="/bmsc/clientes/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestMessage">
+    <wsdl:part name="request" element="inp1:TipoCambio_Request" />
+  </wsdl:message>
+  <wsdl:message name="replyMessage">
+    <wsdl:part name="response" element="inp1:TipoCambio_Response" />
+  </wsdl:message>
+  <wsdl:portType name="TipoCambio_ptt">
+    <wsdl:operation name="TipoCambio">
+      <wsdl:input message="tns:requestMessage" />
+      <wsdl:output message="tns:replyMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TipoCambio_pttBinding" type="tns:TipoCambio_ptt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TipoCambio">
+      <soap:operation soapAction="TipoCambio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TipoCambioService">
+    <wsdl:port name="TipoCambio_pt" binding="tns:TipoCambio_pttBinding">
+      <soap:address location="https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/clientes/pjtTipoCambioSCA/TipoCambioService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

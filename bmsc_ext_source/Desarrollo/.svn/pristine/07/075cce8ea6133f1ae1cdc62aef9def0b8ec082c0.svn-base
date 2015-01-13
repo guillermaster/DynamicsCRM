@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/bmsc/crm/EvaluarScoreService" xmlns:inp1="/bmsc/crm" name="EvaluarScoreService" targetNamespace="/bmsc/crm/EvaluarScoreService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/crm/pjtEvaluarScoreSCA!1.0/EvaluarScoreService.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/crm/pjtEvaluarScoreSCA/EvaluarScoreService?XSD=xsd/EvaluarScore.xsd" namespace="/bmsc/crm" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestMessage">
+    <wsdl:part name="REQUEST" element="inp1:evaluarScore_request" />
+  </wsdl:message>
+  <wsdl:message name="replyMessage">
+    <wsdl:part name="RESPONSE" element="inp1:evaluarScore_response" />
+  </wsdl:message>
+  <wsdl:portType name="EvaluarScore_ptt">
+    <wsdl:operation name="EvaluarScore">
+      <wsdl:input message="tns:requestMessage" />
+      <wsdl:output message="tns:replyMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EvaluarScore_pttBinding" type="tns:EvaluarScore_ptt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EvaluarScore">
+      <soap:operation soapAction="EvaluarScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EvaluarScoreService">
+    <wsdl:port name="EvaluarScore_pt" binding="tns:EvaluarScore_pttBinding">
+      <soap:address location="https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/crm/pjtEvaluarScoreSCA/EvaluarScoreService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

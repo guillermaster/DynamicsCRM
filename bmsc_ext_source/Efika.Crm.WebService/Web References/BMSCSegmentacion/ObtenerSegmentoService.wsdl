@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/bmsc/clientes/ObtenerSegmentoService" xmlns:inp1="ObtenerSegmento" name="ObtenerSegmentoService" targetNamespace="/bmsc/clientes/ObtenerSegmentoService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>https://serviciostest.bmsc.com.bo:443/soa-infra/services/clientes/pjtSegmentosSCA!1.0/ObtenerSegmentoService.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://serviciostest.bmsc.com.bo:443/soa-infra/services/clientes/pjtSegmentosSCA/ObtenerSegmentoService?XSD=xsd/ObtenerSegmentoSDO.xsd" namespace="ObtenerSegmento" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestMessage">
+    <wsdl:part name="REQUEST" element="inp1:InputParameters" />
+  </wsdl:message>
+  <wsdl:message name="replyMessage">
+    <wsdl:part name="RESPONSE" element="inp1:OutputParameters" />
+  </wsdl:message>
+  <wsdl:portType name="ObtenerSegmento_ptt">
+    <wsdl:operation name="ObtenerSegmento">
+      <wsdl:input message="tns:requestMessage" />
+      <wsdl:output message="tns:replyMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObtenerSegmento_pttBinding" type="tns:ObtenerSegmento_ptt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerSegmento">
+      <soap:operation soapAction="ObtenerSegmento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObtenerSegmentoService">
+    <wsdl:port name="ObtenerSegmento_pt" binding="tns:ObtenerSegmento_pttBinding">
+      <soap:address location="https://serviciostest.bmsc.com.bo:443/soa-infra/services/clientes/pjtSegmentosSCA/ObtenerSegmentoService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

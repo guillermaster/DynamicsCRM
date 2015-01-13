@@ -1,0 +1,30 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:RequiredFieldValidator runat="server" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+<asp:RegularExpressionValidator runat="server" ForeColor="#CC3300"></asp:RegularExpressionValidator>
+
+<asp:TextBox runat="server" style="margin: 5px 15px 5px 5px; "></asp:TextBox>
+
+<asp:TextBox runat="server" style="position: absolute; width:26px" SkinId="txtDdl"></asp:TextBox>
+
+<asp:TextBox runat="server" BorderStyle="None" style="background: transparent; margin:0; padding:0;  border-style: none; border-width: 0;"  SkinId="txtTransparent"></asp:TextBox>
+
+
+<asp:ImageButton runat="server" ImageUrl="~/Images/btn_off_lookup.png" style="margin: 0 0 0 -5px" SkinId="lookupButton" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/16/cmd_add.png" SkinId="addButton" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/16/search.gif" style="margin: 0 0 0 -20px; " SkinId="searchButton" />
+<asp:GridView runat="server"  CellPadding="5"  CssClass="crmTable" HeaderStyle-CssClass="crmTableHeader" RowStyle-CssClass="crmTableRow" Height="23" />
+<asp:GridView runat="server" SkinId="grvHeader2"  CellPadding="5"  CssClass="crmTable" HeaderStyle-CssClass="crmTableHeader2" RowStyle-CssClass="crmTableRow" Height="23" />

@@ -1,0 +1,2 @@
+C:\Efika\CRM\BMSC\SRC\Testing\bin\Release\Testing.exe.config
+C:\Efika\CRM\BMSC\SRC\Testing\obj\x86\Release\ResolveAssemblyReference.cache

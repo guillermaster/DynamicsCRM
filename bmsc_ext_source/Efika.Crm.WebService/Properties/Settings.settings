@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Efika.Crm.WebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Efika_Crm_WebService_BMSCTraerSaldos_TraerSaldosService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://serviciosdesa.bmsc.com.bo:443/soa-infra/services/clientes/pjtTraerSaldosSCA/TraerSaldosService</Value>
+    </Setting>
+    <Setting Name="Efika_Crm_WebService_BMSCSegmentacion_ObtenerSegmentoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.191:9091/wstest/ObtenerSegmento/ObtenerSegmentoMService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

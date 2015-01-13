@@ -1,0 +1,7 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\bin\Release\Efika.Crm.Plugins.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\bin\Release\Efika.Crm.Plugins.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\bin\Release\microsoft.crm.sdk.proxy.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\bin\Release\microsoft.xrm.sdk.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\bin\Release\microsoft.xrm.sdk.workflow.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\obj\Release\Efika.Crm.Plugins.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Plugins\obj\Release\Efika.Crm.Plugins.pdb

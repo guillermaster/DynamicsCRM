@@ -1,0 +1,477 @@
+﻿
+body
+{
+    height: 100%;
+    font-family: "segoe ui";
+    font-size: 0.75em;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: "Segoe UI" , Tahoma, Verdana, Arial;
+}
+html
+{
+    height: 100%;
+    font-family: "segoe ui";
+    font-size: 0.75em;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.clear
+{
+    clear: both;
+}
+.RibbonApplicationMenuContainer
+{
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    font-size: 11px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+}
+.RibbonContextsContainer
+{
+    background: url("../Images/Ribbon/Ribbon_Tabline.png");
+    height: 49px !important;
+    overflow: hidden;
+}
+.RibbonTabsContainer
+{
+    height: 80px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 11px; /*background:url(../Images/Ribbon/Ribbon_Background.png");*/
+}
+.RibbonContext
+{
+    height: 45px;
+    font-size: 0px;
+    margin-left: 2px;
+}
+.RibbonContextTitle
+{
+    height: 18px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 11px;
+}
+.RibbonTab
+{
+    height: 18px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-left: 6px;
+    font-size: 11px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+.RibbonGroupCollapsedContainer
+{
+    float: left;
+    display: none;
+    position: relative;
+}
+.RibbonGroupCollapsedContainerDropDown
+{
+    top: 100%;
+    display: none;
+    position: absolute;
+}
+.RibbonGroupContent
+{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.RibbonGroupContent > table
+{
+    height: 82px;
+    overflow: hidden;
+    max-height: 82px;
+}
+.RibbonGroupTitle
+{
+    height: 14px;
+    text-align: center;
+    font-size: 11px;
+}
+.RibbonGroupColumn
+{
+    height: 68px;
+    overflow: hidden;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.RibbonZoneContent
+{
+    float: left;
+}
+.RibbonTooltipContainer
+{
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    font-size: 11px;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 1000;
+    background-image: url("../Images/Ribbon/Ribbon_BackgroundTooltip.png");
+}
+.OfficeWebUI_Workspace
+{
+    width: 100%;
+}
+.OfficeWebUI_WorkspaceContentPanel
+{
+    overflow-y: auto;
+}
+html, form, body
+{
+    overflow: hidden;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-left-color: currentColor;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+body
+{
+    overflow: hidden;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.RibbonTabsContainer
+{
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+    border-right-style: solid !important;
+    border-left-style: solid !important;
+}
+.RibbonContextsContainer
+{
+    /*background-image: url("../Images/Ribbon/Ribbon_Background.png");*/
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.RibbonTabsContainer
+{
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;
+    border-left-color: #c0c0c0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-image: url("../Images/Ribbon/Ribbon_Background.png");
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.RibbonContext
+{
+    border-bottom-color: #c0c0c0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background-image: url("../Images/Ribbon/Ribbon_BackgroundContext.png");
+    background-repeat: repeat-x;
+    background-position-x: left;
+    background-position-y: top;
+}
+.RibbonContextTitle
+{
+    color: #444;
+}
+.RibbonTab
+{
+    color: #888;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    float: left;
+    cursor: pointer;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.RibbonTabActive
+{
+    color: #000;
+    border-top-color: #c0c0c0;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #fff;
+    border-left-color: #c0c0c0;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+}
+.RibbonGroupContent
+{
+    height: 80px;
+    border-right-color: #c0c0c0;
+    border-right-width: 1px;
+    border-right-style: solid;
+    float: left;
+}
+.RibbonGroupCollapsedContainer
+{
+    height: 80px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-right-color: #c0c0c0;
+    border-right-width: 1px;
+    border-right-style: solid;
+    float: left;
+}
+.RibbonGroupCollapsedContainerDropDown
+{
+    height: 81px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-top-color: #c0c0c0;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;
+    border-left-color: #c0c0c0;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid; /* 	background-image: url("WebResource.axd?d=tsPzxL2I3m-i5GDtoalN5Y9iUElYgAuHImp3ZiOaRv6tLVgXW_k-9HL8xcs_1Duo_4Aui_DxxZL6uBr1hyHPMI3W4_hEaVBOeBj8YZnYO-I3ksweZvCNvVtuBxZ76XF_QdKIGUKhBDzmvKai4L14NMemijY9vNGhncCC9wuDD7Mh_OQ7UNJ2X0kn4iaoN_O-0&t=634921238810324117"); 	*/
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.RibbonGroupCollapsedContainerTable
+{
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    cursor: pointer;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.RibbonGroupTitle
+{
+    color: #888;
+}
+.RibbonApplicationMenuContainer
+{
+    border-top-color: #c0c0c0;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;
+    border-left-color: #c0c0c0;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    box-shadow: 0px 2px 4px #c0c0c0;
+}
+.RibbonItems_LargeItem
+{
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    border-top-color: #f1c43f;
+    border-right-color: #f1c43f;
+    border-bottom-color: #f1c43f;
+    border-left-color: #f1c43f;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    float: left;
+}
+.RibbonTooltipContainer
+{
+    border-top-color: #777;
+    border-right-color: #777;
+    border-bottom-color: #777;
+    border-left-color: #777;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; /* 	background-image: url("WebResource.axd?d=_xOR1TRuiKApjsQCIpV-7Se5373nF216k-ydBornK1eET71bbM9yV_cfubWL4PAgvzbiMbJTcpDzstxunxGrz1xDoSo9tYxlHw4Wy6sO_jcAf1v_dD8YLhg-35G0IBrKeOkwUN7p0XocZKE7oXNPh7865iR2GqR9v2SbwGQrh8qQe7IV2eyw4cdi_hF4z3ca0&t=634921238810324117"); 	*/
+    background-repeat: repeat-x;
+    background-position-x: left;
+    background-position-y: top;
+}
+.OfficeWebUI_WorkspaceContainer
+{
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+.OfficeWebUI_Workspace
+{
+    color: #3b3b3b;
+    font-family: "Segoe UI" , Tahoma;
+    font-size: 11px;
+}
+.OfficeWebUI_WorkspaceContentPanel
+{
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-top-color: #a5acb5;
+    border-right-color: #a5acb5;
+    border-bottom-color: #a5acb5;
+    border-left-color: #a5acb5;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+}
+body
+{
+    color: #3b3b3b;
+    font-family: "Segoe UI" , Tahoma;
+    font-size: 11px;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: rgb(232, 236, 240);
+}

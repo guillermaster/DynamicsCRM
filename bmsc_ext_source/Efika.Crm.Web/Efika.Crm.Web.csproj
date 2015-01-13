@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EC96EED-D0FA-4464-83DC-5C6D584F0A9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Efika.Crm.Web</RootNamespace>
+    <AssemblyName>Efika.Crm.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Comunes\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Utils.Zip">
+      <HintPath>..\Comunes\Ionic.Utils.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm">
+      <HintPath>..\Comunes\Microsoft.Crm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Platform.Sdk">
+      <HintPath>..\Comunes\Microsoft.Crm.Platform.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk">
+      <HintPath>..\Comunes\Microsoft.Crm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.crm.sdk.proxy">
+      <HintPath>..\Comunes\microsoft.crm.sdk.proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="microsoft.xrm.sdk">
+      <HintPath>..\Comunes\microsoft.xrm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk.workflow">
+      <HintPath>..\Comunes\microsoft.xrm.sdk.workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.SourceForge.Koogra">
+      <HintPath>..\Comunes\Net.SourceForge.Koogra.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWebUI">
+      <HintPath>..\Comunes\OfficeWebUI.dll</HintPath>
+    </Reference>
+    <Reference Include="OneToOne.BB.Entidad">
+      <HintPath>..\Comunes\OneToOne.BB.Entidad.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Common\AdvertenciaMoneda.ascx" />
+    <Content Include="EnviarDatosOportunidadSistEx.aspx" />
+    <Content Include="CerrarOportunidad.aspx" />
+    <Content Include="Images\16\Close_16.png" />
+    <Content Include="Images\16\cmd_add.png" />
+    <Content Include="Images\16\cmd_add_disabled.png" />
+    <Content Include="Images\16\ico_16_delete.gif" />
+    <Content Include="Images\16\ico_18_reports.gif" />
+    <Content Include="Images\16\importwizard_greentick.gif" />
+    <Content Include="Images\16\minus_shield.png" />
+    <Content Include="Images\16\search.gif" />
+    <Content Include="Images\16\shoppingCart16.png" />
+    <Content Include="Images\16\tick_shield.png" />
+    <Content Include="Images\16\warning16x16.png" />
+    <Content Include="Images\32\contractrenew_32.png" />
+    <Content Include="Images\32\icon10_32.png" />
+    <Content Include="Images\32\icon21_32.png" />
+    <Content Include="Images\32\icon5_32.png" />
+    <Content Include="Images\32\icon86_32.png" />
+    <Content Include="Images\32\maximizevalue.png" />
+    <Content Include="Images\32\Opportunity_32.png" />
+    <Content Include="Images\32\SaveAndClose_32.png" />
+    <Content Include="Images\32\shoppingCart32.png" />
+    <Content Include="Images\btn_off_lookup.png" />
+    <Content Include="Images\check_ok.gif" />
+    <Content Include="Images\crmTblHdrBg.png" />
+    <Content Include="Images\crmTblHdrBg2.png" />
+    <Content Include="Images\crmTblHdrBgOn.png" />
+    <Content Include="Images\dislike.gif" />
+    <Content Include="Images\dollar.png" />
+    <Content Include="Images\grid\asc.png" />
+    <Content Include="Images\grid\bar_bk.gif" />
+    <Content Include="Images\grid\bar_line.gif" />
+    <Content Include="Images\grid\bar_up.gif" />
+    <Content Include="Images\grid\d.gif" />
+    <Content Include="Images\grid\desc.png" />
+    <Content Include="Images\grid\disablereset.png" />
+    <Content Include="Images\grid\Dropdown_Arrow.png" />
+    <Content Include="Images\grid\grid_BarBkOn.gif" />
+    <Content Include="Images\grid\grid_Refresh.gif" />
+    <Content Include="Images\grid\page_FL0.gif" />
+    <Content Include="Images\grid\page_FL1.gif" />
+    <Content Include="Images\grid\page_L0.gif" />
+    <Content Include="Images\grid\page_L1.gif" />
+    <Content Include="Images\grid\page_LL1.gif" />
+    <Content Include="Images\grid\page_R0.gif" />
+    <Content Include="Images\grid\page_R1.gif" />
+    <Content Include="Images\grid\r.gif" />
+    <Content Include="Images\grid\refresh16.gif" />
+    <Content Include="Images\grid\reset.png" />
+    <Content Include="Images\grid\resize.gif" />
+    <Content Include="Images\grid\row_selected.gif" />
+    <Content Include="Images\grid\stripDivider.gif" />
+    <Content Include="Images\like.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\multiselect_btn.png" />
+    <Content Include="Images\multiselect_btn_disabled.png" />
+    <Content Include="Images\multiselect_btn_on.gif" />
+    <Content Include="Images\notify.png" />
+    <Content Include="Images\notify_critico.png" />
+    <Content Include="Images\progress.gif" />
+    <Content Include="Images\Ribbon\Ribbon_Background.png" />
+    <Content Include="Images\Ribbon\Ribbon_BackgroundBackstage.png" />
+    <Content Include="Images\Ribbon\Ribbon_BackgroundBackstagePageActive.png" />
+    <Content Include="Images\Ribbon\Ribbon_BackgroundBackstagePageHover.png" />
+    <Content Include="Images\Ribbon\Ribbon_BackgroundContext.png" />
+    <Content Include="Images\Ribbon\Ribbon_BackgroundTooltip.png" />
+    <Content Include="Images\Ribbon\Ribbon_Background_AppMenu.png" />
+    <Content Include="Images\Ribbon\Ribbon_GroupCollapsed_Icon.png" />
+    <Content Include="Images\Ribbon\Ribbon_GroupExpand.png" />
+    <Content Include="Images\Ribbon\Ribbon_Tabline.png" />
+    <Content Include="Images\semitranspBG.png" />
+    <Content Include="ImportarListaMarketing.aspx" />
+    <Content Include="ImportarPreAprobado.aspx" />
+    <Content Include="OfertaValorMicro.aspx" />
+    <Content Include="RespuestaCampanna.aspx" />
+    <Content Include="ScoreEvaluate\ScoreEvaluate.aspx" />
+    <Content Include="ScoreEvaluate\ScoreEvaluateProcess.aspx" />
+    <Content Include="Scripts\jquery-1.8.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="SimuladorCredito\AprobacOfertaRiesgos.aspx" />
+    <Content Include="SimuladorCredito\BusquedaDivisa.aspx" />
+    <Content Include="SimuladorCredito\BusquedaProducto.aspx" />
+    <Content Include="SimuladorCredito\CerrarOferta.aspx" />
+    <Content Include="SimuladorCredito\CondicionesCredito.aspx" />
+    <Content Include="SimuladorCredito\EvaluarSimulacCreditoOportunidad.aspx" />
+    <Content Include="SimuladorCredito\ReabrirOfertaGerentes.aspx" />
+    <Content Include="SimuladorCredito\ReabrirOfertaRiesgos.aspx" />
+    <Content Include="SimuladorCredito\rptFlujoCaja.aspx" />
+    <Content Include="SimuladorCredito\rptModeloEvaluador.aspx" />
+    <Content Include="SimuladorCredito\rptScorePuntuacion.aspx" />
+    <Content Include="SimuladorCredito\rptSimPagoScore.aspx" />
+    <Content Include="SimuladorCredito\SimuladorCredito.aspx" />
+    <Content Include="Styles\core.css" />
+    <Content Include="Styles\crm.css" />
+    <Content Include="Styles\crm_colors.css" />
+    <Content Include="Styles\ribbon.css" />
+    <Content Include="Styles\second.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\uxguidestyles.css" />
+    <Content Include="waiting.gif" />
+    <Content Include="waiting.swf" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AdvertenciaMoneda.ascx.cs">
+      <DependentUpon>AdvertenciaMoneda.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\AdvertenciaMoneda.ascx.designer.cs">
+      <DependentUpon>AdvertenciaMoneda.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarDatosOportunidadSistEx.aspx.cs">
+      <DependentUpon>EnviarDatosOportunidadSistEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarDatosOportunidadSistEx.aspx.designer.cs">
+      <DependentUpon>EnviarDatosOportunidadSistEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CerrarOportunidad.aspx.cs">
+      <DependentUpon>CerrarOportunidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CerrarOportunidad.aspx.designer.cs">
+      <DependentUpon>CerrarOportunidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Credenciales.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarListaMarketing.aspx.cs">
+      <DependentUpon>ImportarListaMarketing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarListaMarketing.aspx.designer.cs">
+      <DependentUpon>ImportarListaMarketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarPreAprobado.aspx.cs">
+      <DependentUpon>ImportarPreAprobado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarPreAprobado.aspx.designer.cs">
+      <DependentUpon>ImportarPreAprobado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCombo.cs" />
+    <Compile Include="ListaPreaprobado.cs" />
+    <Compile Include="OfertaValorMicro.aspx.cs">
+      <DependentUpon>OfertaValorMicro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OfertaValorMicro.aspx.designer.cs">
+      <DependentUpon>OfertaValorMicro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos.Designer.cs" />
+    <Compile Include="RespuestaCampanna.aspx.cs">
+      <DependentUpon>RespuestaCampanna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RespuestaCampanna.aspx.designer.cs">
+      <DependentUpon>RespuestaCampanna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreEvaluate\ScoreEvaluate.aspx.cs">
+      <DependentUpon>ScoreEvaluate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScoreEvaluate\ScoreEvaluate.aspx.designer.cs">
+      <DependentUpon>ScoreEvaluate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreEvaluate\ScoreEvaluateProcess.aspx.cs">
+      <DependentUpon>ScoreEvaluateProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScoreEvaluate\ScoreEvaluateProcess.aspx.designer.cs">
+      <DependentUpon>ScoreEvaluateProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreEvaluate\ScoreService\ScoreService.cs" />
+    <Compile Include="SimuladorCredito\AprobacOfertaRiesgos.aspx.cs">
+      <DependentUpon>AprobacOfertaRiesgos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\AprobacOfertaRiesgos.aspx.designer.cs">
+      <DependentUpon>AprobacOfertaRiesgos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\BusquedaDivisa.aspx.cs">
+      <DependentUpon>BusquedaDivisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\BusquedaDivisa.aspx.designer.cs">
+      <DependentUpon>BusquedaDivisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\BusquedaProducto.aspx.cs">
+      <DependentUpon>BusquedaProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\BusquedaProducto.aspx.designer.cs">
+      <DependentUpon>BusquedaProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\CerrarOferta.aspx.cs">
+      <DependentUpon>CerrarOferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\CerrarOferta.aspx.designer.cs">
+      <DependentUpon>CerrarOferta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\CondicionesCredito.aspx.cs">
+      <DependentUpon>CondicionesCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\CondicionesCredito.aspx.designer.cs">
+      <DependentUpon>CondicionesCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\EvaluarSimulacCreditoOportunidad.aspx.cs">
+      <DependentUpon>EvaluarSimulacCreditoOportunidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\EvaluarSimulacCreditoOportunidad.aspx.designer.cs">
+      <DependentUpon>EvaluarSimulacCreditoOportunidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\ReabrirOfertaGerentes.aspx.cs">
+      <DependentUpon>ReabrirOfertaGerentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\ReabrirOfertaGerentes.aspx.designer.cs">
+      <DependentUpon>ReabrirOfertaGerentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\ReabrirOfertaRiesgos.aspx.cs">
+      <DependentUpon>ReabrirOfertaRiesgos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\ReabrirOfertaRiesgos.aspx.designer.cs">
+      <DependentUpon>ReabrirOfertaRiesgos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptFlujoCaja.aspx.cs">
+      <DependentUpon>rptFlujoCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptFlujoCaja.aspx.designer.cs">
+      <DependentUpon>rptFlujoCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptModeloEvaluador.aspx.cs">
+      <DependentUpon>rptModeloEvaluador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptModeloEvaluador.aspx.designer.cs">
+      <DependentUpon>rptModeloEvaluador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptScorePuntuacion.aspx.cs">
+      <DependentUpon>rptScorePuntuacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptScorePuntuacion.aspx.designer.cs">
+      <DependentUpon>rptScorePuntuacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptSimPagoScore.aspx.cs">
+      <DependentUpon>rptSimPagoScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\rptSimPagoScore.aspx.designer.cs">
+      <DependentUpon>rptSimPagoScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimuladorCredito\SimuladorCredito.aspx.cs">
+      <DependentUpon>SimuladorCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimuladorCredito\SimuladorCredito.aspx.designer.cs">
+      <DependentUpon>SimuladorCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCambio\TipoCambioServices.cs" />
+    <Compile Include="Utilidades.cs" />
+    <Compile Include="Web References\BMSCEvaluarScoreService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BMSCOnBase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BMSCTipoCambio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Efika.Crm.AccesoServicios\Efika.Crm.AccesoServicios.csproj">
+      <Project>{5E9B7242-BE9F-49E1-A744-A8CC90E71857}</Project>
+      <Name>Efika.Crm.AccesoServicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Efika.Crm.Entidades\Efika.Crm.Entidades.csproj">
+      <Project>{0C4896D8-A592-4A73-B6B9-E66A2A11274E}</Project>
+      <Name>Efika.Crm.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Efika.Crm.Negocio\Efika.Crm.Negocio.csproj">
+      <Project>{F58FB64D-B800-40CD-94CA-75E6AB2223D8}</Project>
+      <Name>Efika.Crm.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\SkinCRM\SkinCRM.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BMSCEvaluarScoreService\EvaluarScore.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\BMSCEvaluarScoreService\EvaluarScoreService.wsdl" />
+    <None Include="Web References\BMSCEvaluarScoreService\evaluarScore_response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BMSCEvaluarScoreService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BMSCOnBase\CaratulaOnBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\BMSCOnBase\CaratulaOnbaseService.wsdl" />
+    <None Include="Web References\BMSCOnBase\caratulaOnBase_response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BMSCOnBase\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BMSCTipoCambio\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BMSCTipoCambio\TipoCambio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\BMSCTipoCambio\TipoCambioService.wsdl" />
+    <None Include="Web References\BMSCTipoCambio\TipoCambio_Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.16.19.248:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA/CaratulaOnbaseService%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BMSCOnBase\</RelPath>
+      <UpdateFromURL>http://172.16.19.248:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA/CaratulaOnbaseService%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Efika_Crm_Web_BMSCOnBase_CaratulaOnbaseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://serviciosdesa.bmsc.com.bo/soa-infra/services/clientes/pjtTipoCambioSCA/TipoCambioService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BMSCTipoCambio\</RelPath>
+      <UpdateFromURL>https://serviciosdesa.bmsc.com.bo/soa-infra/services/clientes/pjtTipoCambioSCA/TipoCambioService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Efika_Crm_Web_BMSCTipoCambio_TipoCambioService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://serviciosdesa.bmsc.com.bo/soa-infra/services/crm/pjtEvaluarScoreSCA/EvaluarScoreService%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BMSCEvaluarScoreService\</RelPath>
+      <UpdateFromURL>https://serviciosdesa.bmsc.com.bo/soa-infra/services/crm/pjtEvaluarScoreSCA/EvaluarScoreService%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Efika_Crm_Web_BMSCEvaluarScoreService_EvaluarScoreService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62577</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

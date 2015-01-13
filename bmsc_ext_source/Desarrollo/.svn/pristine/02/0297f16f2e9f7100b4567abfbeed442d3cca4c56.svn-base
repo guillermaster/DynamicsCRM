@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/bmsc/crm/CaratulaOnbaseService" xmlns:inp1="/bmsc/crm" name="CaratulaOnbaseService" targetNamespace="/bmsc/crm/CaratulaOnbaseService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>http://202PROYESP17.bancomercantil.net:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA!1.0/CaratulaOnbaseService.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://172.16.19.248:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA/CaratulaOnbaseService?XSD=xsd/CaratulaOnBase.xsd" namespace="/bmsc/crm" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestMessage">
+    <wsdl:part name="REQUEST" element="inp1:caratulaOnBase_request" />
+  </wsdl:message>
+  <wsdl:message name="replyMessage">
+    <wsdl:part name="RESPONSE" element="inp1:caratulaOnBase_response" />
+  </wsdl:message>
+  <wsdl:portType name="CaratulaOnbase_ptt">
+    <wsdl:operation name="CaratulaOnbase">
+      <wsdl:input message="tns:requestMessage" />
+      <wsdl:output message="tns:replyMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CaratulaOnbase_pttBinding" type="tns:CaratulaOnbase_ptt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CaratulaOnbase">
+      <soap:operation soapAction="CaratulaOnbase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CaratulaOnbaseService">
+    <wsdl:port name="CaratulaOnbase_pt" binding="tns:CaratulaOnbase_pttBinding">
+      <soap:address location="http://172.16.19.248:8001/soa-infra/services/crm/pjtEnviarCaratulaOnBaseSCA/CaratulaOnbaseService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

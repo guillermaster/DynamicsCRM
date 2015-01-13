@@ -1,0 +1,4 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\bin\Release\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\bin\Release\Efika.Crm.Entidades.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\obj\Release\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\obj\Release\Efika.Crm.Entidades.pdb

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="/brms/clientes" elementFormDefault="qualified" targetNamespace="/brms/clientes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="traerSaldos_request">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pCodCliente" type="xsd:decimal" />
+        <xsd:element name="pUsuario" type="xsd:string" />
+        <xsd:element name="pContrasena" type="xsd:string" />
+        <xsd:element name="pDominio" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="traerSaldos_response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" name="pCuentas" type="cuentas" />
+        <xsd:element maxOccurs="unbounded" name="pTiposCuentas" type="tiposCuentas" />
+        <xsd:element maxOccurs="unbounded" name="pMonedas" type="monedas" />
+        <xsd:element maxOccurs="unbounded" name="pSaldosDisponibles" type="saldosDisponibles" />
+        <xsd:element maxOccurs="unbounded" name="pSaldosContables" type="saldosContables" />
+        <xsd:element name="pRespuesta" type="xsd:integer" />
+        <xsd:element name="pMensaje" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="cuentas">
+    <xsd:sequence>
+      <xsd:element name="cuenta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tiposCuentas">
+    <xsd:sequence>
+      <xsd:element name="tipoCuenta" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="monedas">
+    <xsd:sequence>
+      <xsd:element name="moneda" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="saldosDisponibles">
+    <xsd:sequence>
+      <xsd:element name="saldoDisponible" type="xsd:decimal" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="saldosContables">
+    <xsd:sequence>
+      <xsd:element name="saldoContable" type="xsd:decimal" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

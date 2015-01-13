@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://serviciosdesa.bmsc.com.bo/soa-infra/services/clientes/pjtTraerSaldosSCA/TraerSaldosService?WSDL" filename="TraerSaldosService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://serviciosdesa.bmsc.com.bo/soa-infra/services/clientes/pjtTraerSaldosSCA/TraerSaldosService?XSD=xsd/TraerSaldos.xsd" filename="TraerSaldos.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

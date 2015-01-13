@@ -1,0 +1,74 @@
+﻿body
+{
+    font-family: Segoe UI;
+    font-size:11px;
+}
+
+td
+{
+    border: 1pt solid #a3a3a3;
+    padding: 4pt;
+    vertical-align: top;
+}
+td.wfg
+  {
+   color: #FFFFFF;
+  }
+td.heading
+{
+    font-weight: bold;
+}
+table
+{
+    border-bottom: #a3a3a3 1pt solid;
+    border-left: #a3a3a3 1pt solid;
+    border-collapse: collapse;
+    border-top: #a3a3a3 1pt solid;
+    border-right: #a3a3a3 1pt solid;
+}
+h1
+{
+    font-size:18px;
+}
+h2
+{
+    font-size:16px;
+}
+h3
+{
+    font-size:14px;
+}
+ul
+{
+	padding-left: 5px;
+	margin-left: 15px;
+	line-height: 30px;
+	list-style-type: none;
+}
+
+
+ul.nobullet {
+	list-style-type: none;
+	line-height: 30px;
+	font-family: "Segoe UI", "Segoe UI Light", "Segoe UI Semibold", "Segoe UI Symbol", "Segoe Semibold";
+	font-size: 12px;
+}
+
+
+
+div.area
+{
+	padding: 4px 4px 4px 4px;
+	margin: 2px 2px 2px 2px;
+	border: 1px none #A5ACB5;
+	font-weight: bold;
+	color: #000;
+	font-variant: normal;
+	text-decoration: none;
+}
+.NavTitle {
+	font-family: "Segoe UI", "Segoe UI Light", "Segoe UI Semibold", "Segoe UI Symbol", "Segoe Semibold";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+}

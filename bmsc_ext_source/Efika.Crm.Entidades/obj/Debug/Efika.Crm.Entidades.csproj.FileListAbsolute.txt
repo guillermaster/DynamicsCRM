@@ -1,0 +1,9 @@
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\bin\Debug\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\bin\Debug\Efika.Crm.Entidades.pdb
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\obj\Debug\Efika.Crm.Entidades.dll
+C:\CRM\Efika\Fuentes\Efika.Crm\Efika.Crm.Entidades\obj\Debug\Efika.Crm.Entidades.pdb
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.Entidades\bin\Debug\Efika.Crm.Entidades.dll
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.Entidades\bin\Debug\Efika.Crm.Entidades.pdb
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.Entidades\obj\Debug\ResolveAssemblyReference.cache
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.Entidades\obj\Debug\Efika.Crm.Entidades.dll
+C:\Efika\SVN\Desarrollo\Fuentes\Efika.Crm.Entidades\obj\Debug\Efika.Crm.Entidades.pdb
